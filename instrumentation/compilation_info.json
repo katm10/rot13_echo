@@ -1,0 +1,51 @@
+{
+  "server.o": {
+    "rel_dir": ".",
+    "compiler": "gcc",
+    "inputs": [
+      "server.c"
+    ],
+    "output": "server.o",
+    "args": {
+      "PREPROCESS": [
+        {
+          "option": "-I",
+          "target": "instrumentation",
+          "target_type": "DIR",
+          "separator": " "
+        }
+      ],
+      "COMPILE": [],
+      "ASSEMBLE": [],
+      "LINK": [],
+      "INSTRUMENT": [],
+      "UNSPECIFIED": [],
+      "UNUSED": []
+    },
+    "stages": [
+      "PREPROCESS",
+      "COMPILE",
+      "ASSEMBLE"
+    ]
+  },
+  "server": {
+    "rel_dir": ".",
+    "compiler": "gcc",
+    "inputs": [
+      "server.o"
+    ],
+    "output": "server",
+    "args": {
+      "PREPROCESS": [],
+      "COMPILE": [],
+      "ASSEMBLE": [],
+      "LINK": [],
+      "INSTRUMENT": [],
+      "UNSPECIFIED": [],
+      "UNUSED": []
+    },
+    "stages": [
+      "LINK"
+    ]
+  }
+}

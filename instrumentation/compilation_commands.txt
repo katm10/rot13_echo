@@ -1,0 +1,2 @@
+/home/kmohr/rot13_echo gcc -c server.c -I instrumentation -o server.o
+/home/kmohr/rot13_echo gcc server.o -o server

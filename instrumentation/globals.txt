@@ -1,0 +1,4 @@
+sockfd
+servaddr
+clientaddr
+clientlen
