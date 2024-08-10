@@ -1,4 +1,4 @@
-TARGET=rot13_driver
+TARGET=rot13_module
 obj-m += $(TARGET).o
 $(TARGET)-objs := sample_kernel_driver.o \
 specialized/ASSEMBLE/server.o \
@@ -6,9 +6,10 @@ fast_table.o \
 globals.o \
 kernel_asm_helper.o \
 kernel_helper.o \
-lakeplacid_kernel.o
+lakeplacid_kernel.o \
+wrappers.o
 
-all: install user
+all: install
 
 build: 
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
@@ -17,8 +18,8 @@ clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 install: build
-	- sudo rmmod rot13_driver.ko
-	sudo insmod rot13_driver.ko
+	- sudo rmmod rot13_module.ko
+	sudo insmod rot13_module.ko
 	sudo chmod 666 /dev/rot13_driver
 
 uninstall:

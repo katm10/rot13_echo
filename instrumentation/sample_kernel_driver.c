@@ -17,7 +17,7 @@
 /* Meta Information */
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Katherine Mohr");
-MODULE_DESCRIPTION("A simple example accessing global variables from a kernel module");
+MODULE_DESCRIPTION("rot13 echo server");
 
 extern int handle_request(void);
 

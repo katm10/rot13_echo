@@ -1,1 +1,0 @@
-cmd_/home/kmohr/rot13_echo/instrumentation/modules.order := {   echo /home/kmohr/rot13_echo/instrumentation/rot13_driver.ko; :; } | awk '!x[$$0]++' - > /home/kmohr/rot13_echo/instrumentation/modules.order
