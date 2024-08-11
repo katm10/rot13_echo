@@ -21,7 +21,7 @@ extern struct sockaddr_in clientaddr;
 extern int clientlen;
 
 extern void* __globals_table[1024];
-void* __user_function_table[1024];
+void* __user_function_table[1024] = {0};
 
 extern void init_user_function_table(void);
 

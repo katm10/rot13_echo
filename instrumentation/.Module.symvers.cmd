@@ -1,0 +1,1 @@
+cmd_/home/kmohr/rot13_echo/instrumentation/Module.symvers := sed 's/\.ko$$/\.o/' /home/kmohr/rot13_echo/instrumentation/modules.order | scripts/mod/modpost -m -a  -o /home/kmohr/rot13_echo/instrumentation/Module.symvers -e -i Module.symvers   -T -

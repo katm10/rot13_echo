@@ -1,7 +1,7 @@
-#define PAGE_OFFSET 0x800000000000 // TODO: fill in based on kernel module output
+#define PAGE_OFFSET 0xffff925040000000 // TODO: fill in based on kernel module output
 
 void *__kernel_function_table[1024] = {0};
-void *__user_function_table[1024] = {0};
+extern void *__user_function_table[1024];
 
 int search_kernel_table(void* f) {
     // The function tables aren't necessarily sorted
